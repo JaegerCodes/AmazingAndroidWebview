@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineMiddle"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineMiddle"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etWebUrl"
+            android:textCursorDrawable="@drawable/orange_cursor"
+            android:hint="Introduce an url"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_edittext"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:inputType="textAutoComplete" />
+
+        <Button
+            android:id="@+id/btnTabIntent"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_primary"
+            android:textColor="#fff"
+            android:text="Tab Intent"/>
+        <Button
+            android:id="@+id/btnWebview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_btn_secondary"
+            android:textColor="#000"
+            android:text="Webview"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
