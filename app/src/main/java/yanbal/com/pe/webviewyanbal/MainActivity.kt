@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
                 customTabsIntent.launchUrl(this, Uri.parse(url))
             }
         }
-
         btnWebview.setOnClickListener {
             val url = etWebUrl.text.toString()
             if (validateUrl(url)) {
