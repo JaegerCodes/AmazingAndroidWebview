@@ -47,6 +47,15 @@
             android:background="@drawable/bg_btn_secondary"
             android:textColor="#000"
             android:text="Webview"/>
+
+        <Button
+            android:id="@+id/btnOpenChrome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_btn_orange"
+            android:textColor="#000"
+            android:text="OPEN CHROME"/>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
