@@ -7,12 +7,14 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Environment
 import android.util.Base64
 import android.util.Log
 import android.webkit.JavascriptInterface
 import android.webkit.MimeTypeMap
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
 import java.io.File
 import java.io.FileOutputStream
@@ -27,6 +29,7 @@ class JavaScriptInterface(private val context: Context) {
         convertBase64StringToPdfAndStoreIt(base64Data)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     @Throws(IOException::class)
     private fun convertBase64StringToPdfAndStoreIt(base64PDf: String) {
         Log.e("BASE 64", base64PDf)
